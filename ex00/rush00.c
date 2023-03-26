@@ -6,7 +6,7 @@
 /*   By: djin <djin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 10:58:28 by djin              #+#    #+#             */
-/*   Updated: 2023/03/26 14:31:58 by djin             ###   ########.fr       */
+/*   Updated: 2023/03/26 14:50:07 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,8 @@
 
 void	ft_putchar(char c);
 
-void	rush(void)
+void	rush(int x, int y, int i, int j)
 {
-	int	y;
-	int	x;
-	int	i;
-	int	j;
-	char	a = 111;
-	char	b = 45;
-	char	c = 124;
-
-	x = 5;
-	y = 5;
 	i = 1;
 	j = 1;
 	while (i <= y)
@@ -36,23 +26,15 @@ void	rush(void)
 			if (i == 1 || j == 1 || i == y || j == x)
 			{
 				if ((i == 1 || i == y) && (j == 1 || j == x))
-				{
-					ft_putchar(a);
-				}
+					ft_putchar(111);
 				else if ((i > 1 || i < y) && (j == 1 || j == x))
-				{
-					ft_putchar(c);
-				}
+					ft_putchar(124);
 				else
-				{
-					ft_putchar(b);
-				}
+					ft_putchar(45);
 			}
 			else
-			{
 				ft_putchar(' ');
-			}
-		j++;
+			j++;
 		}
 		ft_putchar('\n');
 		i++;
